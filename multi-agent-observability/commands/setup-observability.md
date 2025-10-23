@@ -12,11 +12,11 @@ Set up the Claude Code hooks multi-agent observability system in the current pro
 
 2. **Locate the plugin template**: Use the Glob tool to find the `.claude-template` directory within the multi-agent-observability plugin. It will typically be located in the Claude Code plugins directory at a path like:
    ```
-   ~/.config/claude-code/plugins/*/multi-agent-observability/.claude-template
+   ~/.config/claude/plugins/*/multi-agent-observability/.claude-template
    ```
    or
    ```
-   ~/.claude-code/plugins/*/multi-agent-observability/.claude-template
+   ~/.claude/plugins/*/multi-agent-observability/.claude-template
    ```
 
 3. **Copy the .claude directory**: Once located, copy the entire `.claude-template` directory to the current working directory and rename it to `.claude`:
