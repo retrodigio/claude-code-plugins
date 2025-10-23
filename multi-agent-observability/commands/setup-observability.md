@@ -1,3 +1,7 @@
+---
+description: Set up Claude Code hooks for multi-agent observability in the current project
+---
+
 You are helping the user set up multi-agent observability for their Claude Code project.
 
 ## Task
@@ -26,7 +30,7 @@ Set up the Claude Code hooks multi-agent observability system in the current pro
    - The `.claude` directory was copied successfully
    - The `settings.json` file was updated with the correct project name
    - All hook scripts are present in `.claude/hooks/`
-   - The directory structure includes: hooks/, commands/, agents/, status_lines/, and settings.json
+   - The directory structure includes: hooks/ and settings.json
 
 6. **Provide next steps**: Inform the user that they need to:
    - Ensure `uv` (Astral uv) is installed for running the Python hook scripts
@@ -37,7 +41,7 @@ Set up the Claude Code hooks multi-agent observability system in the current pro
 
 ## Important Notes
 
-- The bundled .claude-template directory contains: hooks/, commands/, agents/, status_lines/, and settings.json
+- The bundled .claude-template directory contains: hooks/ and settings.json
 - The settings.json uses `$CLAUDE_PROJECT_DIR` environment variable for paths, which Claude Code provides
 - All hook commands use `uv run` to execute Python scripts
 - The `--source-app` parameter in settings.json identifies this project in the observability dashboard

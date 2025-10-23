@@ -2,11 +2,7 @@
   "name": "multi-agent-observability",
   "version": "1.0.0",
   "description": "Sets up Claude Code hooks for multi-agent observability with real-time event tracking and visualization",
-  "author": "retrodigio",
-  "commands": [
-    {
-      "name": "setup-observability",
-      "description": "Copy .claude directory from observability repo and configure for this project"
-    }
-  ]
+  "author": {
+    "name": "retrodigio"
+  }
 }
