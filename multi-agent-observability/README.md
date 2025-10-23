@@ -70,14 +70,24 @@ After running the setup command:
 
 The `.claude` directory installed in your project contains:
 - `hooks/` - Python scripts that capture all Claude Code lifecycle events
-  - Event sender (`send_event.py`) and event-specific hooks
-  - Utility modules for LLM integration, TTS, and summarization
+  - **Core**: `send_event.py` - Universal event sender to observability server
+  - **Event-specific hooks**: Pre/Post tool use, notifications, session events, etc.
+  - **Utilities**: Model extraction and AI-powered event summarization (optional)
 - `settings.json` - Complete hook configuration customized with your project name
-- `commands/` - Additional Claude Code slash commands
-- `agents/` - Pre-configured agent templates for documentation fetching
-- `status_lines/` - Custom status line display scripts
 
-All files are bundled with the plugin - over 20 Python scripts and utilities included!
+**Focused on observability** - Only essential files for event tracking and visualization (no extra commands, agents, or UI customizations).
+
+## Features
+
+This streamlined plugin includes:
+- ✅ **Event tracking** for all Claude Code lifecycle hooks
+- ✅ **Safety features** - Blocks dangerous commands (`rm -rf`), prevents `.env` file access
+- ✅ **AI summaries** (optional) - Generates concise event descriptions using Claude/OpenAI
+- ✅ **Session logging** - Tracks sessions with local logging support
+- ✅ **Model detection** - Automatically extracts model names from transcripts
+- ✅ **Chat transcripts** - Optionally includes conversation history with Stop events
+
+All features work out-of-the-box. AI summaries require `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` (optional).
 
 ## Tracked Events
 
