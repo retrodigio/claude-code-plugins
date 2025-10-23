@@ -4,7 +4,9 @@ A Claude Code plugin that sets up comprehensive hook-based observability for rea
 
 ## Overview
 
-This plugin automates the setup of the [Claude Code Hooks Multi-Agent Observability](https://github.com/disler/claude-code-hooks-multi-agent-observability) system in your projects. It copies the necessary `.claude` directory and configures hook events to track agent behavior in real-time.
+This plugin automates the setup of the [Claude Code Hooks Multi-Agent Observability](https://github.com/disler/claude-code-hooks-multi-agent-observability) system in your projects. It includes all the necessary hook scripts, commands, and configuration files bundled within the plugin, so you don't need to manually copy files from another repository.
+
+The plugin copies the complete `.claude` directory structure to your project and configures hook events to track agent behavior in real-time.
 
 ## What It Does
 
@@ -21,8 +23,10 @@ All events are sent to a visualization dashboard where you can monitor multiple 
 
 Before using this plugin, ensure you have:
 
-1. **[Astral uv](https://docs.astral.sh/uv/)** - Fast Python package manager (required for hook scripts)
-2. **[Multi-Agent Observability Server](https://github.com/disler/claude-code-hooks-multi-agent-observability)** - Clone and run the observability system
+1. **[Astral uv](https://docs.astral.sh/uv/)** - Fast Python package manager (required for running hook scripts)
+2. **[Multi-Agent Observability Server](https://github.com/disler/claude-code-hooks-multi-agent-observability)** - Clone and run the server to receive and visualize events
+
+Note: All hook scripts and configuration files are bundled with this plugin. You only need the observability server running to receive events.
 
 ## Installation
 
@@ -43,9 +47,11 @@ Navigate to your project directory and run:
 
 The command will:
 1. Ask for a unique project identifier (e.g., "my-api-server", "react-app")
-2. Copy the `.claude` directory with all hook scripts and configuration
+2. Copy the bundled `.claude` directory from the plugin to your project
 3. Update the configuration with your project name
 4. Verify the setup was successful
+
+All hook scripts, configuration, and utilities are included in the plugin - no external files needed!
 
 ## Post-Setup
 
@@ -62,12 +68,16 @@ After running the setup command:
 
 ## What Gets Installed
 
-The `.claude` directory contains:
-- `hooks/` - Python scripts that capture Claude Code lifecycle events
-- `settings.json` - Hook configuration with your project identifier
-- `commands/` - Additional Claude Code commands (optional)
-- `agents/` - Pre-configured agents (optional)
-- `status_lines/` - Custom status line scripts (optional)
+The `.claude` directory installed in your project contains:
+- `hooks/` - Python scripts that capture all Claude Code lifecycle events
+  - Event sender (`send_event.py`) and event-specific hooks
+  - Utility modules for LLM integration, TTS, and summarization
+- `settings.json` - Complete hook configuration customized with your project name
+- `commands/` - Additional Claude Code slash commands
+- `agents/` - Pre-configured agent templates for documentation fetching
+- `status_lines/` - Custom status line display scripts
+
+All files are bundled with the plugin - over 20 Python scripts and utilities included!
 
 ## Tracked Events
 
