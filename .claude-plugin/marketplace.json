@@ -3,5 +3,11 @@
   "owner": {
     "name": "retrodigio"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "multi-agent-observability",
+      "source": "./multi-agent-observability",
+      "description": "Sets up Claude Code hooks for multi-agent observability with real-time event tracking and visualization"
+    }
+  ]
 }
